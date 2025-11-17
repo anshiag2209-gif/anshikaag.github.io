@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MuseoSpace Home</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- PARALLAX BACKGROUND -->
+    <div class="parallax-bg" id="para"></div>
+
+    <!-- GALLERY HEADER -->
+    <div class="gallery-header">
+        <div class="header-content">
+            <div class="gallery-logo" id="goHome">MUSEOSPACE</div>
+
+            <nav class="collection-nav">
+
+    <div class="nav-item" id="homeBtn">Home</div>
+
+    <div class="nav-item dropdown">
+        Art Collection ▾
+        <div class="dropdown-menu">
+            <div class="dropdown-item" data-target="renaissanceSection">Renaissance</div>
+            <div class="dropdown-item" data-target="abstractSection">Abstract</div>
+            <div class="dropdown-item" data-target="modernSection">Modern</div>
+            <div class="dropdown-item" data-target="contemporarySection">Contemporary</div>
+        </div>
+    </div>
+
+    <div class="nav-item" id="feedbackBtn">Feedback</div>
+    <div class="nav-item" id="aboutBtn">About Us</div>
+
+</nav>
+
+        </div>
+    </div>
+
+    <!-- MAIN CINEMATIC SLIDER -->
+    <div class="carousel">
+        <div class="list">
+            <div class="item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/The_Last_Supper_-_Leonardo_Da_Vinci_-_High_Resolution_32x16.jpg/1920px-The_Last_Supper_-_Leonardo_Da_Vinci_-_High_Resolution_32x16.jpg" alt="">
+                <div class="content">
+                    <div class="author">Leonardo da Vinci</div>
+                    <div class="title">The Last Supper</div>
+                    <div class="des">
+                        Leonardo’s mural captures the moment Jesus reveals a coming betrayal, showing the apostles’ intense and varied emotional reactions.
+                    </div>
+                    <div class="buttons">
+                        <button onclick="openSlideDetails(this)">SEE MORE</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/%22The_School_of_Athens%22_by_Raffaello_Sanzio_da_Urbino.jpg/1280px-%22The_School_of_Athens%22_by_Raffaello_Sanzio_da_Urbino.jpg" alt="">
+                <div class="content">
+                    <div class="author">Raphael</div>
+                    <div class="title">The School of Athens</div>
+                    <div class="des">
+                        Raphael's fresco unites classical philosophers celebrating reason, knowledge, and truth.
+                    </div>
+                    <div class="buttons">
+                        <button onclick="openSlideDetails(this)">SEE MORE</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXfOVOG7dmlb03SZ5B_6yeydicNMIww6cnPBKtbkVRFj75GJY3EqxtoL7PUlwVoUH5YPdJ5O_RJtChdxxx_9kZFImqsNoNEo6qz4pBFp_ffYycgzZjdyi_-b6GJISelbXrCtIFF_Gg?key=rsin6iOewnZx508oJll35A" alt="">
+                <div class="content">
+                    <div class="author">Joan Miró</div>
+                    <div class="title">Harlequin's Carnival</div>
+                    <div class="des">
+                        Miró’s painting portrays a dreamlike carnival of playful, surreal creatures inspired by his hunger-induced hallucinations.
+                    </div>
+                    <div class="buttons">
+                        <button onclick="openSlideDetails(this)">SEE MORE</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Banksy_Girl_and_Heart_Balloon_%282840632113%29.jpg/1200px-Banksy_Girl_and_Heart_Balloon_%282840632113%29.jpg" alt="">
+                <div class="content">
+                    <div class="author">Banksy</div>
+                    <div class="title">Girl with Balloon</div>
+                    <div class="des">
+                        Banksy’s image of a girl reaching for a red balloon symbolizes a poignant mix of hope, innocence, and loss.
+                    </div>
+                    <div class="buttons">
+                        <button onclick="openSlideDetails(this)">SEE MORE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- thumbnail -->
+        <div class="thumbnail">
+            <div class="item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/The_Last_Supper_-_Leonardo_Da_Vinci_-_High_Resolution_32x16.jpg/1920px-The_Last_Supper_-_Leonardo_Da_Vinci_-_High_Resolution_32x16.jpg"></div>
+            <div class="item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/%22The_School_of_Athens%22_by_Raffaello_Sanzio_da_Urbino.jpg/1280px-%22The_School_of_Athens%22_by_Raffaello_Sanzio_da_Urbino.jpg"></div>
+            <div class="item"><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXfOVOG7dmlb03SZ5B_6yeydicNMIww6cnPBKtbkVRFj75GJY3EqxtoL7PUlwVoUH5YPdJ5O_RJtChdxxx_9kZFImqsNoNEo6qz4pBFp_ffYycgzZjdyi_-b6GJISelbXrCtIFF_Gg?key=rsin6iOewnZx508oJll35A"></div>
+            <div class="item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Banksy_Girl_and_Heart_Balloon_%282840632113%29.jpg/1200px-Banksy_Girl_and_Heart_Balloon_%282840632113%29.jpg"></div>
+        </div>
+
+        <!-- arrows -->
+        <div class="arrows">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+
+        <div class="time"></div>
+    </div>
+
+    <!-- GALLERY SECTION WRAPPER -->
+    <div class="gallery-container">
+
+        <section class="slider-section" id="renaissanceSection">
+            <h2 class="collection-title">Renaissance Artworks</h2>
+            <div class="slider-wrapper">
+                <button class="slide-btn left" data-target="renaissanceSlider">⟨</button>
+                <div class="art-slider" id="renaissanceSlider"></div>
+                <button class="slide-btn right" data-target="renaissanceSlider">⟩</button>
+            </div>
+        </section>
+
+        <section class="slider-section" id="abstractSection">
+            <h2 class="collection-title">Abstract Artworks</h2>
+            <div class="slider-wrapper">
+                <button class="slide-btn left" data-target="abstractSlider">⟨</button>
+                <div class="art-slider" id="abstractSlider"></div>
+                <button class="slide-btn right" data-target="abstractSlider">⟩</button>
+            </div>
+        </section>
+
+        <section class="slider-section" id="modernSection">
+            <h2 class="collection-title">Modern Artworks</h2>
+            <div class="slider-wrapper">
+                <button class="slide-btn left" data-target="modernSlider">⟨</button>
+                <div class="art-slider" id="modernSlider"></div>
+                <button class="slide-btn right" data-target="modernSlider">⟩</button>
+            </div>
+        </section>
+
+        <section class="slider-section" id="contemporarySection">
+            <h2 class="collection-title">Contemporary Artworks</h2>
+            <div class="slider-wrapper">
+                <button class="slide-btn left" data-target="contemporarySlider">⟨</button>
+                <div class="art-slider" id="contemporarySlider"></div>
+                <button class="slide-btn right" data-target="contemporarySlider">⟩</button>
+            </div>
+        </section>
+
+        <button class="share-feedback-btn" onclick="goToFeedback()">Share Feedback 💬</button>
+
+    </div>
+
+    <script src="app.js"></script>
+    <script src="gallery.js"></script>
+
+<script>
+/* Smooth Home Redirect */
+document.getElementById("goHome").addEventListener("click", () => {
+    document.body.classList.add("fade-out");
+    setTimeout(() => {
+        window.location.href = "index.html";
+    }, 800);
+});
+
+/* SEE MORE → artwork.html */
+/* SEE MORE → artwork.html */
+function openSlideDetails(button) {
+    const item = button.closest('.item');
+    const title = item.querySelector('.title').textContent;
+
+    // Map carousel titles to full artwork data from gallery.js
+    const artworkMap = {
+        "The Last Supper": { collection: "renaissance", id: 4 },
+        "The School of Athens": { collection: "renaissance", id: 3 },
+        "Harlequin's Carnival": { collection: "modern", id: 19 },
+        "Girl with Balloon": { collection: "contemporary", id: 29 }
+    };
+
+    // Find matching artwork from gallery data
+    const match = artworkMap[title];
+    let selectedArtwork;
+
+    if (match && typeof artworks !== 'undefined') {
+        // Get full data from gallery.js
+        selectedArtwork = artworks[match.collection].find(art => art.id === match.id);
+    }
+
+    // Fallback to basic data if gallery.js not loaded
+    if (!selectedArtwork) {
+        selectedArtwork = {
+            image: item.querySelector('img').src,
+            title: title,
+            artist: item.querySelector('.author').textContent,
+            description: item.querySelector('.des').textContent,
+            year: "Unknown",
+            medium: "Unknown",
+            style: "Unknown",
+            location: "Unknown",
+            curatorNotes: "A remarkable work of art from our collection."
+        };
+    }
+
+    sessionStorage.setItem("selectedArtwork", JSON.stringify(selectedArtwork));
+    window.location.href = "artwork.html";
+}
+</script>
+
+</body>
+</html>
+<script>
+// HOME button → go to home_page.html
+document.getElementById("homeBtn").addEventListener("click", () => {
+    window.location.href = "index.html";
+});
+
+document.getElementById("feedbackBtn").addEventListener("click", () => {
+    document.body.classList.add("fade-out");
+    setTimeout(() => {
+        window.location.href = "feedback.html";
+    }, 800);
+});
+
+// ABOUT → You can link anywhere
+document.getElementById("aboutBtn").addEventListener("click", () => {
+    alert("Add About Us page link here.");
+});
+
+// Dropdown items → Scroll to specific category
+document.querySelectorAll(".dropdown-item").forEach(item => {
+    item.addEventListener("click", () => {
+        const targetId = item.getAttribute("data-target");
+        document.getElementById(targetId).scrollIntoView({ behavior: "smooth" });
+    });
+});
+</script>
+<script>
+// Toggle dropdown on click
+const dropdown = document.querySelector(".dropdown");
+
+dropdown.addEventListener("click", (e) => {
+    e.stopPropagation();
+    dropdown.classList.toggle("open");
+});
+
+// Close dropdown when clicking outside
+document.addEventListener("click", () => {
+    dropdown.classList.remove("open");
+});
+
+// Dropdown items → scroll to section smoothly
+document.querySelectorAll(".dropdown-item").forEach(item => {
+    item.addEventListener("click", (e) => {
+        e.stopPropagation(); // keep dropdown open long enough to click
+
+        const targetId = item.getAttribute("data-target");
+        document.getElementById(targetId).scrollIntoView({ behavior: "smooth" });
+
+        dropdown.classList.remove("open"); // close after clicking
+    });
+});
+</script>
+<script>
+window.addEventListener("load", () => {
+    document.body.classList.add("page-loaded");
+});
+</script>
